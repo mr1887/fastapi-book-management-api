@@ -8,6 +8,7 @@ app = FastAPI(
     description = "A simple FastAPI to managebook,authors,categories and book covers",
     version = "1.0.0" # API version
 )
+app.mount("/static", StaticFiles(directory = "app/static"),name ="static")
 # them router cho các endpoint liên quan đến sách, tác giả và thể loại
 app.include_router(authors.router, prefix="/authors", tags=["authors"])
 app.include_router(books.router, prefix="/books", tags=["books"])

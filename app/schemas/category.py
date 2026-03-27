@@ -15,7 +15,7 @@ class CategoryUpdate(CategoryBase):
 class CategoryINDBase(CategoryBase):
     id: int
     class Config:
-        orm_mode = True # cho phép sử dụng mô hình ORM để trả về dữ liệu từ cơ sở dữ liệu dưới dạng đối tượng Pydantic
+        from_attributes = True # cho phép sử dụng mô hình ORM để trả về dữ liệu từ cơ sở dữ liệu dưới dạng đối tượng Pydantic
 
 class Category(CategoryINDBase):
     """Schema return for client"""

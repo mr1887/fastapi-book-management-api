@@ -12,7 +12,7 @@ class AuthorUpdate(AuthorBase):
 class AuthorInDB(AuthorBase):
     id: int
     class Config:
-        orm_mode = True # orm cho phep tuong tac voi cac doi tuong ORM nhu SQLAlchemy, cho phep chuyen doi giua cac doi tuong ORM va cac doi tuong Pydantic.
+        from_attributes = True # orm cho phep tuong tac voi cac doi tuong ORM nhu SQLAlchemy, cho phep chuyen doi giua cac doi tuong ORM va cac doi tuong Pydantic.
 class Author(AuthorInDB):
     # cac truong du lieu khac neu can thiet
     pass
